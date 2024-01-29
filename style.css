@@ -594,7 +594,7 @@ nav {
         opacity 2s ease-out var(--tra-delay), 
         transform 1.5s ease-out var(--tra-delay);
     opacity: 0;
-    transform: translateX(-50%);
+    transform: translateX(-100%);
 }
 
 .work-cards:hover {
@@ -627,7 +627,7 @@ nav {
     height: 100%;
     width: 100%;
     background-color: #000000b7;
-    z-index: 1;
+    /* z-index: 1; */
     transition: background-color 0.3s ease-out;
 }
 .modal-button ::after {
@@ -645,6 +645,7 @@ nav {
     font-weight: bold;
     opacity: 0;
     transition: opacity 0.3s ease-out;
+    /* z-index: 2; */
 }
 .modal-button:hover ::after {
     opacity: 1;
