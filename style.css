@@ -1,0 +1,764 @@
+/* January 2024 Copyright All Right Reserved Designed By Irshad Khan (Star infotech College Ajmer (Mewar University)) MCA */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --clr-first : whitesmoke;
+    --clr-second : #aeaeae;
+    --clr-colorfull : #ff6800;
+    --clr-second-disabled: #5d5d5d;
+    --bg-first: rgb(33, 37, 41);
+    --bg-second : #27272a;
+    --bg-darks : rgb(33, 37, 41);
+    --border-light-grey : #b0b0b07a;
+
+    --border-social-icon : #8181813c;
+    --clr-facebook : #316FF6;
+    --clr-linkedin : #0077b5 ;
+    --clr-instagram: #c8035f;
+    --clr-twitter-x: #bfbfbf;
+    --box-shadow-social-icon :3px 9px 16px rgb(0,0,0,0.4), -3px -3px 10px rgba(255,255,255, 0.06), inset 14px 14px 26px rgb(0,0,0,0.3), inset -3px -3px 15px rgba(255,255,255, 0.05);
+
+    --x: 0;
+    --y: 0;
+    --widths : 0;
+    --tra-delay : 0s;
+    --about-sec-parts-transition-delay : 0s;
+    --infoCard-transition-delay : 0s;
+    --contactParts-transition-delay: 0s;
+    --card-background : #27272a;
+    --card-hover : #323232;
+    --card-border: #aeaeae;
+ 
+
+    /* --inner2 :  -10px -10px 10px #ffffff24 ,
+                15px 15px 15px #00000035,
+                inset -5px -5px 5px #9b9b9b33 ,
+                inset 15px 15px 15px #0000001a;
+
+                --inner2-hover :  inset -5px -5px 3px #4b4b4b17 ,
+                       5px 5px 1px #0000000b,
+                      inset -5px -5px 1px #00000049 ,
+                        -5px -5px 3px #0000000a; */
+    
+}
+
+body.theme-white {
+    --clr-first : #151515;
+    --clr-second : #545454;
+    --clr-second-disabled: #b5b5b5;
+    --bg-first: #ffffff;
+    --bg-second : #c2c2d5;
+    --bg-darks : #ffffff;
+    --border-light-grey : #4545457c;
+
+    --border-social-icon : #0000001c;
+    --clr-facebook : #316FF6;
+    --clr-linkedin : #0077b5 ;
+    --clr-instagram: #c8035f;
+    --clr-twitter-x: #272929;
+    --box-shadow-social-icon: 3px 9px 16px rgb(0 0 0 /21%), -3px -3px 10px rgba(255,255,255, 0.06), inset 14px 14px 26px rgb(0 0 0 / 14%), inset -3px -3px 15px rgba(255,255,255, 0.05);
+
+    --card-background : #efefef;
+    --card-hover : #ffffff;
+    --card-border: #b5b5b5;
+
+/* 
+    --inner2 :   -3px -3px 2px #ffffff78 ,
+                 3px 3px 2px #0000003d,
+                inset -3px -3px 2px #ffffff2e ,
+                inset 3px 3px 2px #00000031;
+
+
+    --inner2-hover :  inset -5px -5px 3px #4b4b4b17 ,
+                       5px 5px 1px #0000000b,
+                      inset -5px -5px 1px #00000049 ,
+                        -5px -5px 3px #0000000a; */
+                
+
+}
+.change-theme-sun span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.1rem;
+}
+.change-theme-sun{
+    cursor: pointer; width: 1.8rem;
+}
+body {
+    background: var(--bg-darks);
+    transition: background-color 0.3s ease-out;
+}
+main {
+    overflow: hidden;
+}
+
+.text-first {
+    color: var(--clr-first) !important;
+    transition: color 0.3s ease-out;
+}
+.text-second {
+    color: var(--clr-second) !important;
+    transition: color 0.3s ease-out;
+}
+.text-colorfull {
+    color: var(--clr-colorfull) !important;
+    transition: color 0.3s ease-out;
+}
+.text-second-disabled {
+    color: var(--clr-second-disabled) !important;
+    transition: color 0.3s ease-out;
+}
+.bg-first {
+    background: var(--bg-first) !important;
+    transition: background-color 0.3s ease-out;
+}
+.bg-second {
+    background: var(--bg-second) !important;
+    transition: background-color 0.3s ease-out;
+}
+.bg-darks {
+    background: var(--bg-darks) !important;
+    transition: background-color 0.3s ease-out;
+}
+.bg-card-background {
+    background: var(--card-background) !important;
+}
+
+.w-90 {
+    width: 90%;
+}
+.w-98 {
+    width: 98%;
+}
+@media (max-width:360px) {
+    .w-98 {
+        width: auto;
+    }
+}
+.w-94 {
+    width: 94%;
+}
+.w-80 {
+    width: 80%;
+}
+.h-90 {
+    height: 90%;
+}
+.h-80 {
+    height: 80%;
+}
+
+.fs-1x {
+    font-size: 5rem !important;
+}
+.fs-6x {
+    font-size: 2rem !important;
+}
+.fs-7 {
+    font-size: 0.8rem;
+}
+@media (max-width: 1200px) {
+    .fs-1x {
+        font-size: 3.5rem !important;
+    }
+}
+@media (max-width: 768px) {
+    .fs-1x {
+        font-size: 2.5rem !important;
+    }
+    .fs-6x {
+        font-size: 1rem !important;
+    }
+}
+@media (max-width: 400px) {
+    .fs-1x {
+        font-size: 2rem !important;
+    }
+}
+
+/* .shadow-inner2 {
+    box-shadow: var(--inner2) !important;
+    border: 15px solid #7878781f !important;
+    backdrop-filter: blur(2px);
+    transition: box-shadow 0.3s ease-out;
+} */
+
+@media (max-width : 992px ){
+    #contact, #works, #skills, #education, #about {
+        padding-top: 3.4rem;
+    }
+}
+
+
+
+/* ------------------------------------------------------- */
+/* ______________________________ navbar & header start ______________________________ */
+.padding-top-5-rem {
+    /* padding-top: 5.2rem; */
+    padding-top: 2.5rem;
+}
+.navbar-brand {
+    font-size: 3rem !important;
+}
+@media (max-width: 400px) {
+    .navbar-brand {
+        font-size: 2.5rem !important;
+    }
+}
+nav {
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform 0.7s ease-out, opacity 1s ease-in-out, background-color 0.3s ease-out;
+    background: var(--card-background);
+}
+.nav-visible-on-scroll {
+    opacity: 1;
+    transform: translateY(0) !important;
+}
+@media (hover:hover){
+    .nav-link:hover {
+        color: var(--clr-colorfull) !important;
+    }
+}
+
+.header-img {
+    transition: transform 2.5s cubic-bezier(0.4, 0, 0, 1) 0.7s, opacity 3s ease 0.5s;
+    transform: translateX(20%);
+    opacity: 0;
+}
+.header-img-show-with-fade {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+    /* circle behind header */
+.circle1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(39% at 0 48.5%);
+    background-color: #00b3ff;
+    z-index: -1;
+    
+}
+.circle2::after {
+    content: '';
+    position: absolute;
+    top: 14rem;
+    left: 21rem;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(41% at 50% 50%);
+    background-color: #ff3ba0;
+    z-index: -1;
+}
+@media (max-width: 400px) {
+
+    .circle2::after {
+        left: 11rem;
+    }
+}
+.circle3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #ffeb3b;
+    clip-path: circle(28.1% at 53% -4%);
+}
+    /* text-slider in header */
+.text-slider > p {
+    width: 0ch;
+    overflow: hidden;    
+    white-space: nowrap;
+    animation: text 5s steps(40) infinite alternate; 
+    border-right: 2px solid #4a4a4a;
+}
+@keyframes text {
+    0% {
+        width: 0ch;
+        border-right: 2px solid #4a4a4a;
+    }
+    15%{
+        width: 0ch;
+    }
+    80% {
+        width: 24ch;
+        border-right: 2px solid #4a4a4a;
+    }
+    90% {
+        width: 24ch;
+        border-right: 2px solid #e0e0e0;
+    }
+    100% {
+        width: 24ch;
+        border-right: 2px solid #4a4a4a;
+    }
+}
+    /* download cv button in header */
+.download-cv {
+    outline: none;
+    border: 1px solid var(--border-light-grey);
+    color: var(--clr-second);
+    background: var(--card-background);
+    font-size: 1.1rem;
+    /* box-shadow: var(--inner2); */
+    transition: color 0.2s ease-out, background-color 0.2s ease-out;
+}
+.download-cv:hover {
+    background: var(--card-hover);
+    /* box-shadow: var(--inner2-hover); */
+    /* box-shadow: none; */
+}
+/* .download-cv::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    transition: color 0.2s ease-out, box-shadow 0.2s ease-out;
+    
+    
+}
+.download-cv:hover::after {
+    box-shadow: var(--inner2-hover);
+} */
+/* adding active-link class for hilight the nav-link */
+.active-link, .active-link .fa-solid, .active-link .fa-regular {
+    color:var(--clr-colorfull) !important;
+}
+
+
+
+/* ______________________________ navbar & header end ______________________________ */
+/* ______________________________ Headings start ______________________________ */
+.stroked-text {
+    position: relative;
+    font-size: 7.5rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    text-align: center;
+    color: transparent;
+    -webkit-text-stroke: 1px #7d7d7d78;
+    width: 100%;
+    border-bottom: 2px solid var(--clr-colorfull);
+    z-index: 1;
+}
+.stroked-text::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    height: 2px;
+    width: 80%;
+    transform: translateX(-50%);
+    border-bottom: 1px solid var(--clr-colorfull);
+    
+}
+
+.about-me::after {
+    content: 'About Me'; 
+}
+.quality::after {
+    content: 'my Education';
+}
+.skill::after {
+    content: 'My Skills';
+}
+.works::after {
+    content: 'My Work';
+}
+.contacts::after {
+    content: 'Contact Me';
+}
+
+.about-me::after,.quality::after,.skill::after,.works::after,.contacts::after {
+    position: absolute;
+    height: fit-content;
+    width: max-content;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    color: var(--clr-colorfull);
+    z-index: 2;
+    -webkit-text-stroke: initial;
+}
+@media (max-width:768px) {
+    .stroked-text {
+        font-size: 4.5rem;
+    }
+    .stroked-text::after {
+        font-size: 2.5rem;
+    }
+}
+@media (max-width:576px) {
+    .stroked-text {
+        font-size: 3rem;
+    }
+    .stroked-text::after {
+        font-size: 1.3rem;
+    }
+}
+@media (max-width:310px) {
+    .stroked-text {
+        font-size: 2.2rem;
+    }
+    .stroked-text::after {
+        font-size: 0.9rem;
+    }
+    .navbar-brand {
+        font-size: 2rem !important;
+    }
+}
+/* ______________________________ Headings end ______________________________ */
+/* ______________________________ About start ______________________________ */
+
+
+.hire-me-button{
+    border: none;
+    position: relative;
+    padding: 0;
+    border-radius: 10px;
+    /* transition: background-color 0.3s ease-out; */
+    /* transform: translateY(4rem); */
+}
+.hire-me-button a{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 15px 40px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    overflow: hidden;
+    z-index: 1;
+    border-radius: inherit;
+    transition: color 0.3s ease;
+}
+.hire-me-button a::after{
+    content: '';
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    height: 0;
+    width: 0;
+    border-radius: 50%;
+    background: var(--clr-second);
+    transition: height 0.4s ease-out,width 0.4s ease-out;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+}
+.hire-me-button a:hover::after{
+    height: 310px !important;
+    width: 310px !important;
+}
+
+.about-sec-2-parts, .about-sec-2-parts {
+    transform: translateY(5rem);
+    opacity: 0;
+    transition: opacity 1s ease var(--about-sec-parts-transition-delay), 
+                transform 1s ease-out var(--about-sec-parts-transition-delay),
+                background-color 0.3s ease-out;
+
+}
+
+.about-sec-2-parts-show {
+    opacity: 1;
+    transform: translate(0);
+}
+
+.about-section-1>div, .about-section-2>div {
+    transition: all 0.2s ease-out;
+    border: 2px solid transparent;
+    background: var(--card-background);
+}
+.about-section-1:hover>div ,.about-section-2:hover>div {
+    border-color: var(--card-border);
+    background: var(--card-hover);
+}
+/* ______________________________ About end ______________________________ */
+
+/* ______________________________ Education start ______________________________ */
+.education-information .education-information-card {
+    background: var(--card-background);
+    padding: 1rem;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: background-color 0.3s ease,
+                border-color 0.3s ease,
+                opacity 0.9s ease-out var(--infoCard-transition-delay),
+                transform 1s ease-out var(--infoCard-transition-delay);
+    transform: translateY(8rem);
+    opacity: 0;
+}
+
+.education-information .education-information-card-show {
+    transform: translate(0);
+    opacity: 1;
+}
+.education-information .education-information-card:hover {
+    background: var(--card-hover);
+    border-color: var(--card-border);
+}
+.education-information .education-information-card>span {
+    display: inline-block;
+    padding: 2px 9px;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    border-radius: 5px;
+}
+.fa-house, 
+.fa-address-card, 
+.fa-user-graduate,
+.fa-database,
+.fa-code,
+.fa-envelope {
+    color: transparent;
+    transition: inherit;
+}
+@media (max-width : 992px) {
+    .fa-house, 
+    .fa-address-card, 
+    .fa-user-graduate,
+    .fa-database,
+    .fa-code,
+    .fa-envelope {
+        width: 27px;
+    }
+}
+/* ______________________________ Education end ______________________________ */
+
+
+
+/* ___________________ skills Start ___________________ */
+.progress{
+    border-radius: 9px;
+}
+.progress-bars {
+    background: var(--card-hover);
+    border-radius: inherit;
+}
+
+.skills-section {
+    transition: background-color 0.3s ease-out;
+}
+.skills-section:hover {
+    background: var(--card-hover) !important;
+}
+
+/* for progress bar width */
+.progress-widths {
+    transition: width 1.5s ease-out;
+    width : var(--widths);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.progress-widths span {
+    transform: translateX(-50%);
+    color: var(--clr-first);
+}
+/* ___________________ skills end ___________________ */
+
+/* ___________________ Works start ___________________ */
+.border-light-grey {
+    border:1px solid var(--border-light-grey);
+}
+.work-cards {
+    background-color: var(--card-background);
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: background-color 0.3s ease-out, 
+        border-color 0.3s ease-out, 
+        opacity 2s ease-out var(--tra-delay), 
+        transform 1.5s ease-out var(--tra-delay);
+    opacity: 0;
+    transform: translateX(-50%);
+}
+
+.work-cards:hover {
+    background: var(--card-hover);
+    border-color: var(--card-border);
+}
+
+.show-cards-with-fade {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.explore-arrow-move span i {
+    transition: transform 0.2s ease-in;
+}
+.explore-arrow-move:hover span i {
+    transform: translateX(4px);
+}
+/* ___________________ Works end ___________________ */
+/* ___________________ Contact start ___________________ */
+.contact-col form .div-3 textarea,
+.contact-col form .div-1 input, 
+.contact-col form .div-2 input {
+    border: 1px solid var(--border-light-grey);
+    padding-top: 0.70rem;
+    padding-bottom: 0.70rem;
+    /* background: var(--card-background); */
+    background: var(--bg-darks);
+    transition: all 0.3s ease-out;
+}
+.contact-col form .div-3 textarea::placeholder,
+.contact-col form .div-1 input::placeholder,
+.contact-col form .div-2 input::placeholder {
+    color: var(--clr-second-disabled);
+    transition: color 0.5s;
+}
+.contact-col form .div-3 textarea:focus::placeholder,
+.contact-col form .div-1 input:focus::placeholder,
+.contact-col form .div-2 input:focus::placeholder {
+    color: transparent;
+}
+.contact-col form .div-3 textarea:focus,
+.contact-col form .div-1 input:focus,
+.contact-col form .div-2 input:focus {
+    /* background-color: var(--card-hover) !important; */
+    background-color: var(--bg-darks) !important;
+}
+.contact-col form .div-3 span,
+.contact-col form .div-1 span,
+.contact-col form .div-2 span {
+    position: absolute;
+    transition: all 0.3s ease-in;
+    display: inline-block;
+    top: 0.43rem;
+    left: 0;
+    padding: 0 0.76rem;
+    border-radius: 15px;
+    color: var(--clr-first);
+    opacity: 0;
+    z-index: -1;
+}
+.contact-col form .div-3:focus-within span,
+.contact-col form .div-1:focus-within span,
+.contact-col form .div-2:focus-within span {
+    top : 0;
+    left: 0.5rem;
+    opacity: 1;
+    z-index: 1;
+    border: 1px solid var(--border-light-grey);
+    /* background: var(--card-hover); */
+    background: var(--bg-darks);
+    color: var(--clr-second);
+    transform: translateY(-50%);
+    font-size: 0.7rem;
+    padding: 0 1rem;
+    letter-spacing: 1px;
+}
+.contactInfo-submit-btn {
+    outline: none;
+    border: 1px solid var(--border-light-grey);
+    color: var(--clr-second);
+    background: var(--card-background);
+    box-shadow: var(--box-shadow-social-icon);
+    border: 1px solid var(--border-social-icon);
+}
+.contactInfo-submit-btn:hover {
+    /* background: var(--card-hover); */
+    /* border: 1px solid var(--border-light-grey); */
+    box-shadow: none;
+}
+.contact_section {
+    background: var(--card-background);
+    transition: background-color 0.3s ease-out;
+}
+.contact_section:hover {
+    background: var(--card-hover);
+}
+
+.contact_section_parts {
+    transform: translateY(-7rem);
+    opacity: 0;
+    transition: opacity 0.9s ease-out var(--contactParts-transition-delay) ,
+    transform 1s ease-out var(--contactParts-transition-delay),
+    background-color 0.3s ease-out,color 0.3s ease-out, box-shadow 0.2s ease-out;
+}
+.contact_section_parts-show {
+    transform: translate(0);
+    opacity: 1;
+}
+/* ___________________ Contact end ___________________ */
+/* ___________________ Footer start ___________________ */
+footer {
+    background: var(--card-background);
+    transition: background-color 0.3s ease-out;
+}
+.social-icons {
+    border-radius: 50%;
+    border: 1px solid var(--border-social-icon);
+    box-shadow: var(--box-shadow-social-icon);
+    transition: color 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+.social-icons:hover {
+    box-shadow: none;
+}
+.social-icon-div {
+    column-gap: 1rem;
+    background: var(--card-background);
+    transition: background-color 0.3s ease-out;
+
+}
+.social-icon-div a {
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: inherit;
+}
+
+
+@media (max-width:450px) {
+    .social-icon-div a {
+        height: 2.5rem;
+        width: 2.5rem;
+        font-size: 0.8rem;
+    }
+    .footer-col-2 div p {
+        font-size: 0.8rem;
+    }
+}
+.fa-linkedin-in {
+    color: var(--clr-linkedin);;
+}
+.fa-facebook-f {
+    color: var(--clr-facebook);
+}
+.fa-instagram {
+    color: var(--clr-instagram);
+}
+.fa-x-twitter {
+    color: var(--clr-twitter-x);
+}
+.footer-link {
+    text-decoration: none;
+}
+.footer-link:hover {
+    text-decoration-line: underline;
+}
+/* ___________________ Footer end ___________________ */
+
+
