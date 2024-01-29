@@ -379,11 +379,14 @@ nav {
 .works::after {
     content: 'My Work';
 }
+.portfolios::after {
+    content: 'portfolio';
+}
 .contacts::after {
     content: 'Contact Me';
 }
 
-.about-me::after,.quality::after,.skill::after,.works::after,.contacts::after {
+.about-me::after,.quality::after,.skill::after,.works::after, .portfolios::after, .contacts::after {
     position: absolute;
     height: fit-content;
     width: max-content;
@@ -528,7 +531,8 @@ nav {
 .fa-user-graduate,
 .fa-database,
 .fa-code,
-.fa-envelope {
+.fa-envelope,
+.fa-image {
     color: transparent;
     transition: inherit;
 }
@@ -538,7 +542,8 @@ nav {
     .fa-user-graduate,
     .fa-database,
     .fa-code,
-    .fa-envelope {
+    .fa-envelope,
+    .fa-image {
         width: 27px;
     }
 }
@@ -609,6 +614,45 @@ nav {
     transform: translateX(4px);
 }
 /* ___________________ Works end ___________________ */
+/* ___________________ portfolio start ___________________ */
+.modal-button{
+    position: relative;
+    display: flex;
+}
+.modal-button ::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000000b7;
+    z-index: 1;
+    transition: background-color 0.3s ease-out;
+}
+.modal-button ::after {
+    content: 'Open';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    left: 0;
+    color: var(--clr-colorfull);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+.modal-button:hover ::after {
+    opacity: 1;
+}
+.modal-button:hover ::before {
+    background-color: #00000089;
+}
+/* ___________________ portfolio end ___________________ */
 /* ___________________ Contact start ___________________ */
 .contact-col form .div-3 textarea,
 .contact-col form .div-1 input, 
