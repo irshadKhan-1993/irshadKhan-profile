@@ -134,7 +134,7 @@ main {
 .w-98 {
     width: 98%;
 }
-@media (max-width:360px) {
+@media screen and (max-width:360px) {
     .w-98 {
         width: auto;
     }
@@ -161,12 +161,12 @@ main {
 .fs-7 {
     font-size: 0.8rem;
 }
-@media (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
     .fs-1x {
         font-size: 3.5rem !important;
     }
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .fs-1x {
         font-size: 2.5rem !important;
     }
@@ -174,7 +174,7 @@ main {
         font-size: 1rem !important;
     }
 }
-@media (max-width: 400px) {
+@media screen and (max-width: 400px) {
     .fs-1x {
         font-size: 2rem !important;
     }
@@ -187,7 +187,7 @@ main {
     transition: box-shadow 0.3s ease-out;
 } */
 
-@media (max-width : 992px ){
+@media screen and (max-width : 992px ){
     #contact, #works, #skills, #education, #about {
         padding-top: 3.4rem;
     }
@@ -204,7 +204,7 @@ main {
 .navbar-brand {
     font-size: 3rem !important;
 }
-@media (max-width: 400px) {
+@media screen and (max-width: 400px) {
     .navbar-brand {
         font-size: 2.5rem !important;
     }
@@ -219,7 +219,7 @@ nav {
     opacity: 1;
     transform: translateY(0) !important;
 }
-@media (hover:hover){
+@media screen and (hover:hover){
     .nav-link:hover {
         color: var(--clr-colorfull) !important;
     }
@@ -259,7 +259,7 @@ nav {
     background-color: #ff3ba0;
     z-index: -1;
 }
-@media (max-width: 400px) {
+@media screen and (max-width: 400px) {
 
     .circle2::after {
         left: 11rem;
@@ -401,7 +401,7 @@ nav {
     z-index: 2;
     -webkit-text-stroke: initial;
 }
-@media (max-width:768px) {
+@media screen and (max-width:768px) {
     .stroked-text {
         font-size: 4.5rem;
     }
@@ -409,7 +409,7 @@ nav {
         font-size: 2.5rem;
     }
 }
-@media (max-width:576px) {
+@media screen and (max-width:576px) {
     .stroked-text {
         font-size: 3rem;
     }
@@ -417,7 +417,7 @@ nav {
         font-size: 1.3rem;
     }
 }
-@media (max-width:310px) {
+@media screen and (max-width:310px) {
     .stroked-text {
         font-size: 2.2rem;
     }
@@ -536,7 +536,7 @@ nav {
     color: transparent;
     transition: inherit;
 }
-@media (max-width : 992px) {
+@media screen and (max-width : 992px) {
     .fa-house, 
     .fa-address-card, 
     .fa-user-graduate,
@@ -776,7 +776,7 @@ footer {
 }
 
 
-@media (max-width:450px) {
+@media screen and (max-width:450px) {
     .social-icon-div a {
         height: 2.5rem;
         width: 2.5rem;
