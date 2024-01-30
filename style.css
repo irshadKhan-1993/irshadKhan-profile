@@ -227,7 +227,7 @@ nav {
 
 .header-img {
     /* transition: transform 2s cubic-bezier(0.4, 0, 0, 1), opacity 1.5s ease; */
-    transition: transform 2s ease-out, opacity 1.5s ease;
+    transition: transform 1s ease-out, opacity 1.5s ease;
     -webkit-transform: translateX(20%);
     -ms-transform: translateX(20%);
     transform: translateX(20%);
