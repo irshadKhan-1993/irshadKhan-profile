@@ -31,18 +31,6 @@
     --card-background : #27272a;
     --card-hover : #323232;
     --card-border: #aeaeae;
- 
-
-    /* --inner2 :  -10px -10px 10px #ffffff24 ,
-                15px 15px 15px #00000035,
-                inset -5px -5px 5px #9b9b9b33 ,
-                inset 15px 15px 15px #0000001a;
-
-                --inner2-hover :  inset -5px -5px 3px #4b4b4b17 ,
-                       5px 5px 1px #0000000b,
-                      inset -5px -5px 1px #00000049 ,
-                        -5px -5px 3px #0000000a; */
-    
 }
 
 body.theme-white {
@@ -64,19 +52,6 @@ body.theme-white {
     --card-background : #efefef;
     --card-hover : #ffffff;
     --card-border: #b5b5b5;
-
-/* 
-    --inner2 :   -3px -3px 2px #ffffff78 ,
-                 3px 3px 2px #0000003d,
-                inset -3px -3px 2px #ffffff2e ,
-                inset 3px 3px 2px #00000031;
-
-
-    --inner2-hover :  inset -5px -5px 3px #4b4b4b17 ,
-                       5px 5px 1px #0000000b,
-                      inset -5px -5px 1px #00000049 ,
-                        -5px -5px 3px #0000000a; */
-                
 
 }
 .change-theme-sun span {
@@ -180,13 +155,6 @@ main {
     }
 }
 
-/* .shadow-inner2 {
-    box-shadow: var(--inner2) !important;
-    border: 15px solid #7878781f !important;
-    backdrop-filter: blur(2px);
-    transition: box-shadow 0.3s ease-out;
-} */
-
 @media screen and (max-width : 992px ){
     #contact, #works, #skills, #education, #about {
         padding-top: 3.4rem;
@@ -194,11 +162,9 @@ main {
 }
 
 
-
-/* ------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------- */
 /* ______________________________ navbar & header start ______________________________ */
 .padding-top-5-rem {
-    /* padding-top: 5.2rem; */
     padding-top: 2.5rem;
 }
 .navbar-brand {
@@ -226,7 +192,6 @@ nav {
 }
 
 .header-img {
-    /* transition: transform 2s cubic-bezier(0.4, 0, 0, 1), opacity 1.5s ease; */
     transition: transform 1s ease-out, opacity 1.5s ease;
     -webkit-transform: translateX(20%);
     -ms-transform: translateX(20%);
@@ -240,7 +205,7 @@ nav {
     opacity: 1;
 }
 
-    /* circle behind header */
+/* circle behind header */
 .circle1::before {
     content: '';
     position: absolute;
@@ -280,71 +245,57 @@ nav {
     background-color: #ffeb3b;
     clip-path: circle(28.1% at 53% -4%);
 }
-    /* text-slider in header */
-.text-slider > p {
-    width: 0ch;
-    overflow: hidden;    
-    white-space: nowrap;
-    animation: text 5s steps(40) infinite alternate; 
-    border-right: 2px solid #4a4a4a;
+/* text-slider */
+.text-slider {
+    display: flex;
+    align-items: center;
+    justify-content: start;
 }
-@keyframes text {
-    0% {
-        width: 0ch;
-        border-right: 2px solid #4a4a4a;
+.text-slider div p{
+    margin: 0;
+    padding: 0;
+}
+.text-slider div p span {
+    border-right: 3px solid var(--clr-first);
+    padding-right: 5px;
+    font-weight: 500;
+
+}
+@media screen and (max-width:576px) {
+    .text-slider {
+        font-size: 1rem;
     }
-    15%{
-        width: 0ch;
-    }
-    80% {
-        width: 24ch;
-        border-right: 2px solid #4a4a4a;
-    }
-    90% {
-        width: 24ch;
-        border-right: 2px solid #e0e0e0;
-    }
-    100% {
-        width: 24ch;
-        border-right: 2px solid #4a4a4a;
+    .text-slider div p span{
+        border-right: 2px solid var(--clr-first);
     }
 }
-    /* download cv button in header */
+@media screen and (min-width:576px) {
+    .text-slider {
+        font-size: 1.4rem;
+    }
+}
+@media screen and (min-width:992px) {
+    .text-slider {
+        font-size: 2.1rem;
+    }
+}
+
+/* download cv button in header */
 .download-cv {
     outline: none;
     border: 1px solid var(--border-light-grey);
     color: var(--clr-second);
     background: var(--card-background);
     font-size: 1.1rem;
-    /* box-shadow: var(--inner2); */
     transition: color 0.2s ease-out, background-color 0.2s ease-out;
 }
 .download-cv:hover {
     background: var(--card-hover);
-    /* box-shadow: var(--inner2-hover); */
-    /* box-shadow: none; */
 }
-/* .download-cv::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    border-radius: inherit;
-    transition: color 0.2s ease-out, box-shadow 0.2s ease-out;
-    
-    
-}
-.download-cv:hover::after {
-    box-shadow: var(--inner2-hover);
-} */
-/* adding active-link class for hilight the nav-link */
+
 .active-link, .active-link .fa-solid, .active-link .fa-regular {
     color:var(--clr-colorfull) !important;
 }
-
-
 
 /* ______________________________ navbar & header end ______________________________ */
 /* ______________________________ Headings start ______________________________ */
@@ -442,8 +393,6 @@ nav {
     position: relative;
     padding: 0;
     border-radius: 10px;
-    /* transition: background-color 0.3s ease-out; */
-    /* transform: translateY(4rem); */
 }
 .hire-me-button a{
     position: relative;
@@ -632,7 +581,6 @@ nav {
     height: 100%;
     width: 100%;
     background-color: #000000b7;
-    /* z-index: 1; */
     transition: background-color 0.3s ease-out;
 }
 .modal-button ::after {
@@ -650,7 +598,6 @@ nav {
     font-weight: bold;
     opacity: 0;
     transition: opacity 0.3s ease-out;
-    /* z-index: 2; */
 }
 .modal-button:hover ::after {
     opacity: 1;
@@ -666,7 +613,6 @@ nav {
     border: 1px solid var(--border-light-grey);
     padding-top: 0.70rem;
     padding-bottom: 0.70rem;
-    /* background: var(--card-background); */
     background: var(--bg-darks);
     transition: all 0.3s ease-out;
 }
@@ -684,7 +630,6 @@ nav {
 .contact-col form .div-3 textarea:focus,
 .contact-col form .div-1 input:focus,
 .contact-col form .div-2 input:focus {
-    /* background-color: var(--card-hover) !important; */
     background-color: var(--bg-darks) !important;
 }
 .contact-col form .div-3 span,
@@ -709,7 +654,6 @@ nav {
     opacity: 1;
     z-index: 1;
     border: 1px solid var(--border-light-grey);
-    /* background: var(--card-hover); */
     background: var(--bg-darks);
     color: var(--clr-second);
     transform: translateY(-50%);
@@ -726,8 +670,6 @@ nav {
     border: 1px solid var(--border-social-icon);
 }
 .contactInfo-submit-btn:hover {
-    /* background: var(--card-hover); */
-    /* border: 1px solid var(--border-light-grey); */
     box-shadow: none;
 }
 .contact_section {
@@ -810,5 +752,3 @@ footer {
     text-decoration-line: underline;
 }
 /* ___________________ Footer end ___________________ */
-
-
