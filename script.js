@@ -129,7 +129,8 @@ document.addEventListener("DOMContentLoaded", function () {
         });
         
         /* navbar visible on scroll */
-        scroll_Y > 250 ? document.querySelector("nav").classList.add("nav-visible-on-scroll") : null ;
+        let nav = document.querySelector("nav").classList;
+        scroll_Y > 200 ? nav.add("nav-visible-on-scroll") : nav.remove("nav-visible-on-scroll") ;
 
         /* about-section-patrs show */
         if (scroll_Y >= document.querySelector("#about-sec-parent").offsetTop - window.innerHeight / 1.7){
