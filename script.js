@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 flag = 1;
             }
             i++;
-        },250)
+        },150)
     }
     function eraseName () {
         let outputs = document.querySelector(".text-slider div p span");
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 printName();
                 clearInterval(x)
             }
-        },100);
+        },50);
     }
 
     /* dark-and-white-theme */
@@ -87,7 +87,6 @@ document.addEventListener("DOMContentLoaded", function () {
             themes.add("theme-white");
             icons.remove("fa-moon");
         }
-
     }
     function getPreviousTheme() {
 
