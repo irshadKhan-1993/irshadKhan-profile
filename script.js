@@ -78,31 +78,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (theme === 'theme-black'){
             themes.remove("theme-white");
-            icons.add("fa-moon");
             navBg.add("navbar-dark");
+            icons.remove("fa-sun");
+            icons.add("fa-moon");
             
         }
         else {
-            navBg.remove("navbar-dark");
             themes.add("theme-white");
+            navBg.remove("navbar-dark");
+            icons.add("fa-sun");
             icons.remove("fa-moon");
         }
     }
     function getPreviousTheme() {
 
-        let currentSelectedTheme = localStorage.getItem('theme');
+        let currentSelectedTheme = localStorage.getItem('irshadTheme');
         
         if(currentSelectedTheme){
             applyTheme(currentSelectedTheme);
         }
     }
-    function setCurretTheme(theme,currentSelectedTheme) {
-        localStorage.setItem(theme, currentSelectedTheme);
-    }
+    
     document.querySelector(".change-theme-sun").addEventListener("click", function () {
 
         const currentSelectedTheme = document.body.classList.contains('theme-white') ? 'theme-black': 'theme-white';
-        setCurretTheme('theme', currentSelectedTheme);
+        localStorage.setItem('irshadTheme', currentSelectedTheme);
         applyTheme(currentSelectedTheme);
     });
 
