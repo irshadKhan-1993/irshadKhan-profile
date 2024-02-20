@@ -68,7 +68,7 @@ body {
     transition: background-color 0.3s ease-out;
 }
 main {
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .text-first {
@@ -216,6 +216,7 @@ nav {
     z-index: -1;
     
 }
+
 .circle2::after {
     content: '';
     position: absolute;
